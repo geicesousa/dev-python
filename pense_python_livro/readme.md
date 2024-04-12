@@ -1,0 +1,1 @@
+### Anotações e resoluções dos estudos sobre o livro _Pense em Python_
