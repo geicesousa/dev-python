@@ -57,9 +57,9 @@ print('solução 3')
 #solução 3 (aceita)
 itens = []
 
-item1 = input('item: ')
-item2 = input('item: ')
-item3 = input('item: ')
+item1 = input('')
+item2 = input('')
+item3 = input('')
 itens.append(item1)
 itens.append(item2)
 itens.append(item3)
