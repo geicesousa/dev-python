@@ -14,3 +14,10 @@ class Historico:
            "valor": transacao.valor,
            "data": datetime.now().strftime("%d/%m/%Y %H:%M:%s")
         }) 
+
+    # gerador
+    def gerar_relatorio(self, tipo_transacao = None): 
+        for transacao in self._transacoes:
+            if tipo_transacao is None or transacao['tipo'].lower() == tipo_transacao.lower():
+                yield transacao
+    
