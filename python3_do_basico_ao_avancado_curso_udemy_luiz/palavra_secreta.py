@@ -4,7 +4,7 @@
 # a letra não está, exibe * 
 # só pode digitar um letra
 
-print('Bem-vindo ao jogo! Será que você consegue acertar a palavra?!?')
+print('\nBem-vindo ao jogo! \nSerá que você consegue acertar a palavra?!?\n\t**********')
 
 palavra_secreta = 'performace'
 letras_acertadas = ''
