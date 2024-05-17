@@ -9,7 +9,7 @@ print('USANDO WHILE')
 while len(matilha) < 100:    
     idade = randint(0,99)
     contador += 1
-    matilha.append(f"Doguinho {contador}, idade {idade}")
+    matilha.append(f"Doguinho {contador}, idade {idade}.")
     
 print('\n'.join(matilha))
 print()
