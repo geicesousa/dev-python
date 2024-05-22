@@ -12,3 +12,5 @@ class Cliente:
             return
         
         transacao.registrar(conta)
+
+    # informar limite de transações 

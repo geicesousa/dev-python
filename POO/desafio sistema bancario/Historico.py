@@ -3,6 +3,7 @@ from datetime import datetime
 class Historico:
     def __init__(self):
         self._transacoes = []
+        self.limite_transacoes = 10
 
     @property
     def transacoes(self):
@@ -21,3 +22,6 @@ class Historico:
             if tipo_transacao is None or transacao['tipo'].lower() == tipo_transacao.lower():
                 yield transacao
     
+    # mostrar data e hora das transações
+    def transacoes_diarias(self):
+        pass

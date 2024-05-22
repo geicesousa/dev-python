@@ -15,3 +15,7 @@ class Transacao(ABC):
         
         else:   
            print('conta inválida, não é instância')
+
+    # limitar 10 transações por dia
+    def limite_transacoes_diarias(self):
+        

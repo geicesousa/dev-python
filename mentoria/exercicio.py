@@ -19,3 +19,4 @@ for i in range(1,101):
     idade = randint(0,99)
     print(f'Doguinho {i}, idade {idade}')
 
+# criar classe cachorro, criar uma class matilha; abstrair para poder usar de outras maneiras 
