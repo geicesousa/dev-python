@@ -14,7 +14,15 @@
 
 2. Quais são os requisitos desse projeto?
 
+    - 
 
+Os pedidos terão:
+    - exibir o status do pedido para o cliente
+    - saber a forma do pagamento - caso seja dinheiro, qnto de troco?
+    - idetificar a qtd de sabores
+    - cliente
+    - id
+    - ordenar os pedidos pelo horário de confirmação
 
 ----
 Cliente:

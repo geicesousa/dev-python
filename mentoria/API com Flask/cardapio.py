@@ -1,13 +1,15 @@
+# o valor da pizza de 2 sabores será sempre o mais caro - será inserido na regra de negócio
+# dividir os sabores em classicos e premium (?)
 cardapio = {
     "pizzas": {
         "marguerita_teste": {
             "id":1,
+            "ingredientes": [],
             "tamanho": [
-                {"P": 30.99, "id": 1.1},     
-                {"G": 50.89, "id": 1.2}
+                {"P": 30.99},     
+                {"G": 50.89}
             ]
         },
-        "marguerita": {"preco": 50.89, "id":1},
         "mussarela":{"preco": 40.49, "id":2},
         "portuguesa": {"preco": 50.99, "id":3},
         "napolitana": {"preco": 40.89, "id":4},
@@ -34,7 +36,7 @@ cardapio = {
         ]
     },
     "sobremesas": { 
-        "fatia de torta": 20,
+        "fatia de torta": 20, 
         "docinho": 3.50,
         "uma bola de sorvete": 5,
         "duas bolas de sorvete": 8

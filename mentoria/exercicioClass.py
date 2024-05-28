@@ -8,24 +8,23 @@ class Cachorro:
     def __str__(self):
         return f'Nome: {self.nome} | Idade: {self.idade}'
 
-    def nome_cachorro(self):
+    def get_nome(self):
         return self.nome
     
-    def idade_cachorro(self):
+    def get_idade(self):
         return self.idade
 
-    def setter_nome(self, novo):
-        self.nome = novo
+    def set_nome(self, nome):
+        self.nome = nome
         return self.nome 
     
-    def setter_idade(self, nova):
-        self.idade = nova
+    def set_idade(self, idade):
+        self.idade = idade
         return self.idade
     
-
 class Matilha(Cachorro):
     def __init__(self, nome, tamanho):
-        super().__init__(nome)
+        super().__init__(nome) # usar composição ao invés de herança
         self.tamanho = tamanho
         self.matilha = []
     
@@ -35,20 +34,16 @@ class Matilha(Cachorro):
         while contador < self.tamanho:
             contador += 1
             # criei um dicionário pq garante pegar nome e idade separados
-            cachorro_idade = { "nome": self.nome, "idade": randint(1, 25)}
-            self.matilha.append(cachorro_idade)
+            # cachorro = { f'"nome": {self.nome} {contador} , "idade": {randint(1, 25)}'} assim cria um set, um set é uma chave e string
+            cachorro = {"nome": f'{self.nome} {contador}'  , "idade": randint(1, 25)}
+            self.matilha.append(cachorro)
 
-            # passando um array como parametro de matilha 
-            # for nome in self.nome:           
-            #     cachorro_idade = { "nome": nome, "idade": randint(1, 25)}
-            #     matilha.append(cachorro_idade)
+            
 
-        
         return self.matilha
 
-   
-racas = ['pitbull', 'cão', 'viralata', 'caramelo']
+
 instanciacao = Matilha('racas', 8)
 instanciacao.cria_matilha()
-instanciacao.nome_cachorro()
+instanciacao.get_nome()
 print(instanciacao.cria_matilha())
