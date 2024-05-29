@@ -10,15 +10,69 @@ cardapio = {
                 {"G": 50.89}
             ]
         },
-        "mussarela":{"preco": 40.49, "id":2},
-        "portuguesa": {"preco": 50.99, "id":3},
-        "napolitana": {"preco": 40.89, "id":4},
-        "brie com geléia de pimenta": {"preco": 70.89, "id":5},
-        "camarão e cream cheese": { "preco": 80.89, "id":6},
-        "quatro queijos": { "preco": 60.89, "id":7},
-        "baiana": { "preco": 50.89, "id":8},
-        "lombinho": { "preco": 50.89, "id":9},
-        "canadense": { "preco": 50.89, "id":0}
+        "mussarela":{
+            "id":2, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 28.99},     
+                {"G": 40.49}
+            ]} ,
+        "portuguesa": {
+            "id":3, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 38.99},     
+                {"G": 50.99}
+            ]},
+        "napolitana": {
+            "id":4, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 29.99},     
+                {"G": 40.89}
+            ]},
+        "brie com geléia de pimenta": {
+            "id":5, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 48.99},     
+                {"G": 70.89}
+            ]},
+        "camarão e cream cheese": { 
+            "id":6, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 56.99},     
+                {"G": 80.89}
+            ]},
+        "quatro queijos": {
+            "id":7, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 42.99},     
+                {"G": 60.89}
+            ]},
+        "baiana": { 
+            "id":8, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 38.99},     
+                {"G": 50.89}
+            ]},
+        "lombinho": { 
+            "id":9, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 38.99},     
+                {"G": 50.89}
+            ]},
+        "canadense": { 
+            "id":0, 
+            "ingredientes": [],
+            "tamanho": [
+                {"P": 48.99},     
+                {"G": 60.89}
+            ]}
     },
     "bebidas": {
         "refrigerante": [
