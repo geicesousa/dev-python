@@ -1,0 +1,4 @@
+Criando e escrevendo no arquivo 
+nome
+nova linha
+{'nome': 'geice', 'idade': 27, 'profissão': 'software engieneer'}

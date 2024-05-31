@@ -46,6 +46,7 @@ class Matilha():
         self.matilha[index][attr] = value
 
     # armazenar no banco de dados, vulgo txt, para que o dado seja armazenado/persistido
+    # open() close()
 
 print('instanciação cachorro')
 cao = Cachorro('matias')
@@ -64,3 +65,4 @@ primeira_matilha.set_matilha('idade', 0, '19')
 primeira_matilha.set_matilha('idade', 1, 32)
 
 print(primeira_matilha.get_matilha())
+
