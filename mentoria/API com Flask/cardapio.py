@@ -76,17 +76,17 @@ cardapio = {
     },
     "bebidas": {
         "refrigerante": [
-            { "tipo": "lata - 350ml", "preco": 11.99}, 
-            { "tipo": "litro", "preco": 7.99}
+            { "lata - 350ml": 7.99}, 
+            { "litro - 1l": 11.99}
         ], 
         "suco": [
-            { "tipo": "garrafa - 500ml", "preco": 11.99}, 
-            { "tipo": "copo - 300ml", "preco": 5.99}
+            { "garrafa - 500ml": 11.99}, 
+            { "copo - 300ml": 5.99}
         ], 
         "cerveja": [
-            { "tipo": "garrafa - 600ml", "preco": 12.99}, 
-            { "tipo": "long neck - 330ml", "preco": 9.99}, 
-            { "tipo": "lata- 350ml", "preco": 5.99}
+            { "garrafa - 600ml": 12.99}, 
+            { "long neck - 330ml": 9.99}, 
+            { "lata- 350ml": 5.99}
         ]
     },
     "sobremesas": { 

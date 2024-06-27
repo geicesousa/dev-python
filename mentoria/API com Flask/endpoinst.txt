@@ -1,0 +1,15 @@
+Endpoints: Dono
+GET/menu
+POSt/editmenu
+GET  /getorder : Retorna os pedidos solicitados
+PUT /setstatus: seta o status do pedido
+PUT /setwaitingtime: seta o tempo de entrega
+GET /users : pega informações dos clientes
+GET /getinfosales : pega informações de vendas
+Endpoints clientes:
+GET/menu
+POST /neworder
+POST /creatclient cadastra novo cliente
+POST /signin login de usuario
+GET /getorder retorna pedidos  do cliente
+POST / GET /newchat conversa com o restaurante
