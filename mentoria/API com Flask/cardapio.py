@@ -96,3 +96,8 @@ cardapio = {
         "duas bolas de sorvete": 8
     }
 }
+
+for index, item in enumerate(cardapio):
+    print(index, item)
+    print()
+    

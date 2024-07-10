@@ -3,9 +3,9 @@ from pathlib import Path
 
 DIRETORIO = Path(__file__).parent
 
-class Cachorro:
+class Cachorro: #nome de class começa com letra maiúscula
     def __init__(self, doguinho):
-        self.nome = doguinho
+        self.nome = doguinho #não usamos vírgula pois se não vira uma tupla
         self.idade = randint(1, 25)
         
     def __str__(self):
@@ -31,7 +31,7 @@ def armazena_matilha(dados, arquivo):
     gera_arquivo.writelines(str(dados))
     gera_arquivo.close()
 
-class Matilha():
+class Matilha(): 
     def __init__(self, nome, tamanho):
         self.nome = Cachorro(nome)
         self.tamanho = tamanho
@@ -50,7 +50,7 @@ class Matilha():
 
         return self.matilha
     
-    def get_matilha(self):
+    def get_matilha(self): # metodos são nomeados com _
         return self.matilha
     
     def set_matilha(self, attr, index, value):

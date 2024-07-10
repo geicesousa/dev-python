@@ -1,0 +1,2 @@
+uma api pode ser relacional ou não relacional, vai depender da estrutura de dados que precisamos, se iremos acessar/modificar a informação sozinha ou se sempre irá depender do pai;
+- no caso da api da pizzaria é relacional pois haverá a necessidade de acessar cada item separado 

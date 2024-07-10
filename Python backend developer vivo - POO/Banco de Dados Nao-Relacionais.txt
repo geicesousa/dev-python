@@ -1,0 +1,79 @@
+>> NoSQL
+- O correto é NOT Only SQL, é mais abrangente, não segue um modelo de tabela e relacionamento; 
+- tem capacidade para lidar com alto volume de dados, alta escalabilidade, lida bem com as grandes demandas que podem surgir;
+- alta flexibilidade da estrutura de dados, os dados nem sempre precisam ser definidos
+- não tem consistência imediata dos dados, a atualização pode demorar um pouco a acontecer (delay)
+- possui melhor desempenho em cenários de consultas intensivas
+- melhor tolerância a falhas
+
+-> As principais diferenças entre SQL e NoSQL
+SQL:
+ - Modelo de dados fixo
+ - Escalabilidade vertical (hardware)
+ - Transações ACID 100%
+ - Linguagem de consulta SQL
+NoSQL:
+ - Modelo de dados flexível
+ - Escalabilidade horizontal
+ - Transações ACID ausentes total ou parcialmente
+ - Linguagem de consulta varia de acordo com o SGBD
+
+Tipos de NoSQL:
+- Key-value 
+  - cada chave é um identificador único para acessar seu valor, SGDBs: Redis, Riak, Amazon DynmoDB (é json)
+
+- Documento
+  - os dados são armazenados em dados semiestruturados, geralmente em json ou bson (binário); SGDBs: MongoDB, Couchbase, Apache CouchDB
+
+- Coluna
+  - os dados são armazenados em formato de colunas, o que permite alta escalabilidade e eficiência, SGDBs:Apache Cassandra, ScyllaDB, HBase
+
+- Grafos  
+  - armazenamento e consulta de dados são interconectados, os relacionamento são tão importantes quanto os dados (como redes sociais); SGDBs: Neo4j, Amazon Neptune, JanusGraph
+
+(há mais, esses são os principais/mais comuns)
+
+>> Mongo DB
+- orientado a documentos
+- escalabilidade horizontal e modelagem flexível (lida com grande volume de dados)
+- não exige squema
+- BSON (binary json), ou seja, semiestruturado
+- consome mais armazenamento do que SQL
+- muito usado em aplicações web (e-commerce)
+- todos os documentos estão dentro de uma coleção, que é um grupamento lógico de documentos
+- (boas práticas) os nomes das coleções devem começar com letra ou undeline, podem ter letras e nº e _, não podem ser vazios e nem tem mais de 64bytes de comprimento
+- os documentos são compostos por chave/valor e possuem um identificador único (_id), são BSON, o tamanho máximo é 16mb, pode haver documentos aninhados (inner documents)
+- o mongo não garante integridade referencial (de um doc dentro de outro)
+
+Consultas simples:
+- db.colecao.find({chave/valor}) 
+- db.colecao.findOne({chave/valor}) 
+- updateMany(),
+- na frente dos operadores usamos o $; 
+- operadores lógicos são $and, $or, $not
+  uso: {$and: [{idade: 20}, {nome:"Carlos"}]}
+       {$or: [{idade: 20}, {nome:"Jessica"}]}
+
+- operadores de comparação 
+  $eq ==
+  $ne !=
+  $gt >
+  $gte >=
+  $lt <
+  $lte <=
+  $in []
+  $nin [] (negação no array)
+
+  uso agredado: {$and: [{idade: {$eq: 20}}]}
+                {$not: [{nome: {$eq: "Carla"}}]}
+      {cidade: {$in: ["São Paulo", "Belo Horizonte"]}}
+
+- Projeção (project, os campos que desejamos selecionar na query - o _id sempre virá tbm), Ordenação (sort, chave: 1/-1 - crescente/decrescente), Limitação (limit, quantos itens a query deve retornar), Paginação (skip, limit)
+
+>> Redis
+- é um sistema de armazenamento de dados em memória de alto desempenho, quando há restart do servidor os dados são perdidos
+- a estrutura dos dados é versátil
+- armazena chaves e valores, mas não são documentos
+- principais comandos: SET, GET, DEL, EXISTS, KEYS, INCR, DECR, EXPIRE
+- podemos colocar tempos de expiração dos dados 
+ 

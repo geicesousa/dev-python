@@ -104,6 +104,6 @@ clientes = [
   },
 ]
 
-historico_vendas = [
+relatorio_vendas = [
   {}
 ]

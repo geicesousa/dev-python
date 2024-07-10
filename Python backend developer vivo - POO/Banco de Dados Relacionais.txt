@@ -1,0 +1,73 @@
+>> BD
+Tipos:
+    - Relacionais (SQL - structured query language)
+    - Não Relacionais (NoSQL) (não apenas SQL)
+    - Orientado a Objetos
+    - Hierárquico
+
+>> Sistema de Gerenciamento de Banco de Dados (SGBD), permitem administrar BD; Create, Read, Update e Delete (CRUD)
+- PostgreSQL, MySQL, mongoDB, SQLite, MariaDB, Redis
+- Estrutura do SQL:
+    - chaves primárias (únicas) e chaves estrangeiras (indicam que existem relacionamento entre as informações da tabela)
+
+- transações ACID, garantem da consistência da informação; 
+Atomicidade - todas as transações devem ser executadas com sucesso, ex: transferência bancária
+Consistência - quando um dado é alterado, as regras devem ser mantidas (tipo de dado, se é ob)
+Isolamento - cada transação é feita de maneira isolada, uma execução por vez
+Durabilidade - após a transação seja realizada, a informação é permanente mesmo após uma queda de sistema, por exemplo
+
+- Declarações SQL
+    - DQL (consulta - select), DML (manipulação - insert, update, delete), DDL (definição - create, alter, drop), DCL (controle - grant, revoke), DTL (transação - begin, commit, rollback)
+
+- googlar sqltutorial 
+
+> DQL > SELECT: WHERE, LIMIT, ORDER BY, OFFSET, JOIN (INNER, LEFT, RIGTH), EXPLAIN, HAVING
+> DDL: CREATE, ALTER(ADD COLUMN/INDEX), DROP
+> DML: INSERT, UPDATE, DELETE
+> DTL: BEGIN, COMMIT, ROLLBACK
+
+>> MER (modelo de entidade-relacionamento) e DER (diagrama entidade-relacionamento)
+- UML e Models
+
+>>Chaves-primária
+- PRIMARY KEY* 
+- AUTO_INCREMENT (para ser gerada automaticamente)
+- podem ser simples (uma coluna) ou composta (+1coluna)
+
+>> Chave estrangeira
+- usada para manter relacionamento entre as tabelas, mas mantendo a integridade dos dados, como usar:
+    - FOREING KEY* (chave_estrangeira) REFERENCES {{tabela_referencia}} (coluna)
+
+- caso a tabela já exista e quisermos modificar, usamos
+    ALTER TABLE {{tabela}}
+    ADD CONSTRAINT {{nome_constraint}} # mantem a integridade referencial, não permite excluir um el. pai deixando os filhos órfãos
+    FOREING KEY (id_)
+    REFERENCES {{tabela_referencia}} (id)
+
+- ON DELETE: define o que acontecerá com os filhos quando um registro pai for excluído
+- ON UPDATE: define o que acontece quando um registro pai for alterado
+- CASCADE, SET NULL, SET DEFAULT e RESTRICT: são usados junto com o ON DELETE/UPDATE para definir o que acontecerá 
+
+* é uma constraint; restrições para que o dado se mantenha íntegro
+
+>> Normalização de dados
+- Formas normais, originalmente eram 3, mas atualmente há 6
+- (1fn) Atomicidade de dados: cada valor de ser indivisível, ou seja, um campo não deve ser uma lista, como endereço (rua, nº, bairro) ou telefone (dd e nº), devemos separar cada item
+- (2fn) para chaves-primárias compostas, deve estar de acordo a 1fn; os atributos não chave devem depender da chave primária; registros com chave primária simples já é 2fn
+- (3fn) deve estar de acordo com a fn 1 e 2, não deve haver dependência entre uma coluna não-chave e outra não-chave; atributos não chave devem depender apenas da PK, sem dependências indiretas
+
+>> Consultas
+- INNER JOIN, LEFT/RIGTH/FULL JOIN, LEFT/RIGTH/FULL OUTER JOIN 
+Funções agregadas:
+- Consultas (conta os registros)
+- SUM (soma)
+- AVG (média de valores numéricos)
+- MIN (valor min)
+- MAX (valor max)
+
+- GROUP BY / ORDER BY
+
+>> Índices
+Servem para analizar as execuções das querys, auxiliam na pesquisa porque especifica 
+- EXPLAIN SELECT * FROM {{tabela}}
+- 

@@ -1,20 +1,20 @@
 from flask import  Flask, jsonify, request
 from cardapio import cardapio
-from restaurante import pedidos, clientes, historico_vendas
-from markupsafe import escape # proteje de ataques de injeção de códigos, colocar códigos maliciosos com a intenção de interromper o funcionamento ou roubar dados 
+from restaurante import pedidos, clientes, relatorio_vendas
+from markupsafe import escape # proteje de ataques de injeção de códigos, colocar códigos maliciosos com a intenção de interromper o funcionamento ou roubar dados | retorna uma string, as vezes com simbolos &#
 
 app = Flask(__name__)
 
 #------- CARDÁPIO ------#
 @app.route('/cardapio') # exibe o cardápio
 def get_cardapio():
-    return jsonify(cardapio)
+    return jsonify((cardapio))
 
-@app.route('/cardapio/pizza') # exibe a sessão de pizzas
+@app.route('/cardapio/pizzas') # exibe a sessão de pizzas
 def get_pizza():
     return jsonify(cardapio.get('pizzas'))
 
-@app.route('/cardapio/pizza/<sabor>') # exibe um sabor específico de pizza
+@app.route('/cardapio/pizzas/<sabor>') # exibe um sabor específico de pizza
 def get_sabor(sabor):
     return jsonify(cardapio.get('pizzas').get(escape(sabor)))
 
@@ -51,9 +51,29 @@ def cria_novo_item_especifico(categoria, tipo):
     return jsonify(cardapio.get(categoria).get(tipo))
 #except AttributeError:
 
-# Criar o PUT de cardapio
+# AJUSTAR o PUT de cardapio - insere o body apenas no primeiro item
+
+@app.route('/cardapio/<categoria>/<tipo>', methods=['PUT'])
+def edita_item(categoria, tipo):
+    item_modificado = request.get_json()
+    for item in cardapio[categoria][tipo]:
+        item.update(item_modificado)
+        return jsonify(cardapio.get(categoria).get(tipo))
 
 
+@app.route('/cardapio/<categoria>/<tipo>', methods = ['DELETE']) 
+# deleta seção do cardapio pelo id
+def deleta_item_do_cardapio(categoria, tipo):
+    del cardapio[categoria][tipo]
+
+    return jsonify(cardapio.get(categoria))
+
+@app.route('/cardapio/bebidas/<tipo>/<int:index>', methods = ['DELETE']) 
+# deleta item especifico de cada bebida
+def deleta_item_especifico_do_cardapio( tipo, index):
+    del cardapio['bebidas'][tipo][index]
+
+    return jsonify(cardapio.get('bebidas'))
 
 #------- PEDIDOS ------#
 @app.route('/pedidos')
@@ -76,7 +96,8 @@ def cria_pedido():
     # e a hora?
     return jsonify(pedidos)
 
-@app.route('/pedidos/<int:id>', methods = ['PUT']) #INSERIR STATUS NA ROTA para garantir que apenas o status possa ser modificado
+@app.route('/pedidos/<int:id>', methods = ['PUT']) 
+#INSERIR STATUS NA ROTA para garantir que apenas o status possa ser modificado
 # modifica o (status) pedido pelo id
 def edita_pedido(id):
     pedido_modificado = request.get_json()
@@ -105,7 +126,6 @@ def get_clientes_id(value):
         if cliente.get('id') == value:
             return jsonify(cliente)
 
-
 @app.route('/clientes', methods=['POST'])
 def cria_cliente():
     novo_cliente = request.get_json()
@@ -121,7 +141,39 @@ def modifica_cliente(value):
             return jsonify(cliente)
 
 
+#------- RELATÓRIO DE VENDAS ------#
+@app.route('/relatorio')
+def get_relatorio_vendas():
+    return jsonify(escape(relatorio_vendas))
 
 
 app.run(port=5000, debug=True, use_reloader=True) 
 
+# update (dict) e append (list)
+# Lista inicial de dicionários
+lista_de_dicionarios = [
+    {'nome': 'João', 'idade': 30},
+    {'nome': 'Maria', 'idade': 25}
+]
+
+# Adicionar um novo campo 'email' ao segundo dicionário na lista
+# para modificar usamos a mesma lógica
+lista_de_dicionarios[1]['email'] = 'maria@example.com'
+
+# Exibir a lista atualizada
+print(lista_de_dicionarios)
+
+## Lista inicial de dicionários
+lista_de_dicionarios = [
+    {'nome': 'João', 'idade': 30},
+    {'nome': 'Maria', 'idade': 25}
+]
+
+# Novo dicionário a ser adicionado
+novo_dicionario = {'nome': 'Pedro', 'idade': 28}
+
+# Adicionar o novo dicionário à lista
+lista_de_dicionarios.append(novo_dicionario)
+
+# Exibir a lista atualizada
+print(lista_de_dicionarios)
