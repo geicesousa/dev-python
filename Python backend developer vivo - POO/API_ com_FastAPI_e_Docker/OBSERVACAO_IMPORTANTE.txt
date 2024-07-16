@@ -1,0 +1,1 @@
+o docker não está funcionando no notebook então não consegui subir as imagens para acompanhar o banco de dados e nem executar o alembic (que precisa do banco que o docker gera)

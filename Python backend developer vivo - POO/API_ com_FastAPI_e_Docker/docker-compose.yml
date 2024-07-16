@@ -1,0 +1,13 @@
+# servirá para lidar com o banco de dados
+# não consegui ver se a imagem subiu pq estou com a versão do ubunto que não tá funcionando o docker | instalar o DBeaver
+ 
+version: "3"
+services:
+  db:
+    image: postegres:11-alpine
+    environment:
+      POSTEGRES_PASSWORD: workout
+      POSTEGRES_USER: workout
+      POSTEGRES_DB: workout
+    ports:
+      - "5432-5432"
