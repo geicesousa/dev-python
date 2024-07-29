@@ -1,18 +1,6 @@
-### Acompanhamento das atividades
+## API COM FLASK
 
-[ x ] criação dos cardápios
-
-[ x ] criação de endpoints get
-
-[ x ] exercício da criação de uma matilha 
-
-[ x ] criação de endpoints post
-
-[ x ] criação de endpoints put
-
-[ x ] criação de endpoints delete
-
-[  ] criação dos models
+Esta API permite ao usuário _**visualizar**_ cardápio (pizza, bebidas, sobremesas), clientes, pedidos e relatório de vendas; **_criar_** pedidos, clientes, nova categoria no cardápio, novos itens/sabores em categorias já existentes (pizza, bebidas, sobremesas); _**modificar**_ dados dos clientes, informações do cardápio, pedidos; _**deletar**_ itens em categorias existentes
 
 #### ROTAS CARDAPIO:
 
@@ -45,3 +33,19 @@
 #### ROTA RELATÓRIO:  
 
 '/relatorio' - exibe relatório de vendas <br/>
+
+### Acompanhamento das atividades
+
+[ x ] criação dos cardápios
+
+[ x ] criação de endpoints get
+
+[ x ] exercício da criação de uma matilha 
+
+[ x ] criação de endpoints post
+
+[ x ] criação de endpoints put
+
+[ x ] criação de endpoints delete
+
+[  ] criação dos models
