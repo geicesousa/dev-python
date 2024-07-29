@@ -4,7 +4,9 @@ restaurante = {
       "status": "em andamento",
       "criado_as": "datetime",
       "cliente": "clientes.id",
-      "previsao_entrega": "criado_as + 50min"
+      "previsao_entrega": "criado_as + 50min",
+      "sabor": "baiana",
+      "tamanho": "G"
     }
     ],
   "clientes": [
@@ -32,28 +34,36 @@ pedidos = [
     "criado_as": "datetime",
     "cliente": "io90", 
     "previsao_entrega": "criado_as + 50min",
-    "id": 1
+    "id": 1,
+    "sabor": "baiana",
+    "tamanho": "G"
   },
   {
     "status": "finalizado",
     "criado_as": "23h",
     "cliente": "Flaviana",
     "previsao_entrega": "criado_as + 50min",
-    "id": 2
+    "id": 2,
+    "sabor": "brie com geléia de pimenta",
+    "tamanho": "P"
   },
   {
     "status": "em andamento",
     "criado_as": "datetime",
     "cliente": "teste",
     "previsao_entrega": "criado_as + 50min",
-    "id": 3
+    "id": 3,
+    "sabor": "portuguesa",
+    "tamanho": "G"
   },
   {
     "status": "saiu para entrega",
     "criado_as": "datetime",
     "cliente": "Cicrana",
     "previsao_entrega": "criado_as + 50min",
-    "id": 5
+    "id": 5,
+    "sabor": "canadense",
+    "tamanho": "P"
   },
 ]
 

@@ -4,10 +4,13 @@
 # a letra não está, exibe * 
 # só pode digitar um letra
 
+# alterar para uma lista e aplicar um random para selecionar uma aleatória
+
 print('\nBem-vindo ao jogo! \nSerá que você consegue acertar a palavra?!?\n\t**********')
 
 palavra_secreta = 'performace'
-letras_acertadas = ''
+
+letras_acertadas = '' 
 contador = 0
 
 while True:

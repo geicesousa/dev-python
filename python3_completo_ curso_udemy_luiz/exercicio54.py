@@ -1,4 +1,4 @@
-#1 
+#1 - par ou ímpar
 number = input('digite um número inteiro: ') or 10
 print(number.isdigit()) # retorna true ou false para numeros inteiros
 try:
@@ -9,7 +9,8 @@ try:
         print('este número é ímpar')
 except:
     print('vc tem que digitar um número inteiro')
-#2 
+
+#2 - cumprimento de acordo com a hora
 horario = input('digite um horário: ')
 
 try:
@@ -23,7 +24,7 @@ try:
 except:
     print('horário inválido')
 
-#3
+#3 - tamanho de nome
 nome = input('seu nome')
 
 if len(nome) >= 1 and len(nome) <= 4:

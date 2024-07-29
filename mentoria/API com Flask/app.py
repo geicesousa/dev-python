@@ -45,6 +45,8 @@ def cria_novo_item_especifico(categoria, tipo):
         pega_rota.append(novo_item) #append pq insere um item numa lista
     elif categoria == 'pizzas':
         pega_rota.update(novo_item)
+    elif categoria and tipo:
+        pega_rota.append(novo_item)
     else:
         return "Erro. Caminho não encontrado."
     
@@ -88,8 +90,7 @@ def get_pedidos_id(id):
             return jsonify(pedido)
 
 @app.route('/pedidos', methods = ['POST'])
-def cria_pedido():
-    
+def cria_pedido():    
     novo_pedido = request.get_json()
     pedidos.append(novo_pedido)
     # como gerar um novo id - fazer um random e comparar com os ids já existentes, se já existir, multiplicar por 2  

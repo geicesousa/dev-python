@@ -1,3 +1,4 @@
+# os Dados são os Atributos e o comportamento são os Métodos
 # Classes agrupam dados e funções de um conjunto mais geral (carros, funcionários, bolos, casas)
 # Objetos são os resultados, os elementos criados a partir de uma classe, chamados instâncias (um carro específico, um funcionário, bolo de laranja, uma casa)
 
