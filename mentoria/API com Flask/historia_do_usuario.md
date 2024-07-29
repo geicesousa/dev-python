@@ -4,13 +4,11 @@
 
 #### Objetivo geral: Construir uma API para um sistema de atendimento de uma Pizzaria
 
-#### **História: do usuário**
+#### **História do usuário**
 
 >*"Estou tendo uma demanda muito grande e está difícil gerenciar pelo whatsapp. Fica difícil gerenciar a fila de pedidos e não atrasar os pedidos mais antigos. Outro dia por conta das várias mensagens acabamos esquecendo um pedido feito às 19h e só colocando ele de fato na cozinha quando o cliente cobrou o prazo de entrega, que era de 50 min. Ou seja, a pizza só chegou na casa do cliente quase 21h. Foi uma dor de cabeça horrível. Eu gostaria de um sistema que me permitisse receber os pedidos, identificando quando é 1 ou 2 sabores, que permitisse também exibir para o cliente o status desse pedido. O pagamento vai ser feito na entrega mas gostaríamos de saber quando levar troco ou a maquininha de cartão. Outro coisa que gostaríamos é ter o telefone das pessoas para mandar as ofertas promocionais numa lista de transmissão do whatsapp. Ah sim, seria bom também termos um relatório de vendas para acompanharmos o nosso faturamento. Vocês fazem esse serviço? Conseguem me entregar na semana que vem?"* 
 
 1. Quais são os problemas que vocês enxergam aqui?
-    -
-
 2. Quais são os requisitos desse projeto?
     - necessidade de organização da fila de pedidos por ordem de chegada, usando data e hora
     - necessidade de ter o horário que o pedido ficará pronto
@@ -46,12 +44,12 @@
 
     Restaurante: 
     - POST /cardapio [x]
-    - PUT /cardapio
-    - DELETE /itemcardapio
+    - PUT /cardapio [x]
+    - DELETE /itemcardapio [x]
     - GET /pedidos: Retorna os pedidos solicitados [x]
     - PUT /pedido/status: seta o status do pedido [x]
     - GET /clientes: pega informações dos clientes [x]
-    - GET /relatorio: pega informações de vendas
+    - GET /relatorio: pega informações de vendas [x]
 
     Clientes:
     - GET /pedido [x]
@@ -64,6 +62,4 @@
     - POST /login
     - POST-GET /chat 
 
-- criar models, criar todos os endpoints e testar no postman, os dados devem ser persistidos: ver sql
-
-- organizar cada endpoint de acordo com restaurante e cliente
+- [] criar models, os dados devem ser persistidos (sql)
