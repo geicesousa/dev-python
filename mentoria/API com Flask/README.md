@@ -48,4 +48,6 @@ Esta API permite ao usuário _**visualizar**_ cardápio (pizza, bebidas, sobreme
 
 [ x ] criação de endpoints delete
 
-[  ] criação dos models
+[  ] criação dos models 
+
+[  ] persistir dados 
