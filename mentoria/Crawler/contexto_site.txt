@@ -1,0 +1,9 @@
+PASSOS:
+- acessa o site
+- coletar os links numa lista
+- acessar cada link
+- coletar os campos: (dentro de cada link)
+    - nº da lei
+    - data
+    - texto
+    - categoria
