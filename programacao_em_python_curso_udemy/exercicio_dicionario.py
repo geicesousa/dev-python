@@ -35,3 +35,4 @@ amarelo = cores.get('amarelo', 'cor não encontrada')
 print(vermelho)
 print(amarelo)
 print()
+

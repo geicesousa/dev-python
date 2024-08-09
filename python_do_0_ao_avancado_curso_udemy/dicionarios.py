@@ -27,3 +27,32 @@ print(dicionario.keys())
 
 print()
 print()
+
+# update (dict) e append (list)
+# Lista inicial de dicionários
+lista_de_dicionarios = [
+    {'nome': 'João', 'idade': 30},
+    {'nome': 'Maria', 'idade': 25}
+]
+
+# Adicionar um novo campo 'email' ao segundo dicionário na lista
+# para modificar usamos a mesma lógica
+lista_de_dicionarios[1]['email'] = 'maria@example.com'
+
+# Exibir a lista atualizada
+print(lista_de_dicionarios)
+
+## Lista inicial de dicionários
+lista_de_dicionarios = [
+    {'nome': 'João', 'idade': 30},
+    {'nome': 'Maria', 'idade': 25}
+]
+
+# Novo dicionário a ser adicionado
+novo_dicionario = {'nome': 'Pedro', 'idade': 28}
+
+# Adicionar o novo dicionário à lista
+lista_de_dicionarios.append(novo_dicionario)
+
+# Exibir a lista atualizada
+print(lista_de_dicionarios)
