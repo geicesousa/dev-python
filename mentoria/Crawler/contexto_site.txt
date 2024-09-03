@@ -1,6 +1,7 @@
+[para conseguir executar a versão da urllib3 deve ser a urllib3==1.26.18, não importa a versão do python]
 PASSOS:
-- acessa o site
-- coletar os links numa lista
+- acessa o site [response]
+- coletar os links numa lista [links_categorias]
 - acessar cada link
 - coletar os campos: (dentro de cada link)
     - nº da lei

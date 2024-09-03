@@ -1,5 +1,3 @@
-# from verificador_cpf import valida_cpf
-# ajustar os if e returns
 import random 
 
 def gerador_cpf():
