@@ -61,12 +61,11 @@ cumprimento('Olá')
 
 print(saudacao_nome(saudacao, 'Geice'))
 
-# closure
+# closure -> a função de dentro
 def multiplicacao(multiplicador):
     def multiplicar(numero):
         return numero * multiplicador
     return multiplicar
-
 
 
 duplicar = multiplicacao(2)
@@ -76,3 +75,23 @@ quaduplicar = multiplicacao(4)
 print(duplicar(6))
 print(triplicar(9))
 print(quaduplicar(3))
+
+
+# sempre que usamos *args e **kwargs a função poderá receber uma quantidade sem fim de argumentos
+# o controle de quantidade de argumentos nomeados (**kwars) e argumentos posicionais(*args) pode ser feito usando / (positional only parameters)
+# o que vem antes da barra deve ser argumento posicional
+#
+def somando(x, y, /):
+    print(x+y)
+    
+def somando2(x, y, /, a, b):
+    print(x+y+a+b)
+    
+#somando(x=7, 8) # SyntaxError: positional argument follows keyword argument
+
+somando2(1,2,5,b=9)
+
+# keyword-only arguments * 
+def somando3(x, y, *, a, b): #tudo que vem antes do * é posicional e tudo que vem depois é nomeado
+    print(x+y+a+b)
+
