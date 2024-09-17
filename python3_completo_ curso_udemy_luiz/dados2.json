@@ -1,0 +1,13 @@
+{
+  "nome": "Geice",
+  "idade": 37,
+  "profissão": "software engenieer",
+  "contatos": [
+    {
+      "telefone": "(71)987568416"
+    },
+    {
+      "celular": "(71)987458769"
+    }
+  ]
+}
