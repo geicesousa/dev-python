@@ -12,7 +12,7 @@ pessoa = {
 }
 
 with open('dados.json', 'w') as arquivo:
-    json.dump(pessoa, arquivo, indent=2)
+    json.dump(pessoa, arquivo, indent=2) #dump para arquivo, dumps para string
     print(arquivo)
     
 with open('dados2.json', 'w') as arquivo:

@@ -1,0 +1,6 @@
+Olá $nome, esperamos que tudo esteja bem!
+O dia ${aniversario} esta chegando, seu aniversário.
+Gostaríamos de informar que seu patrimônio esta avaliado em ${patrimonio}
+
+Atencionsamente,
+$financiadora

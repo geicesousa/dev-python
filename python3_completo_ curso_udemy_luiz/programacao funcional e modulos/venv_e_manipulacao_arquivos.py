@@ -45,3 +45,7 @@ arquivo_pathlib.write_text('Uma frase bem bonita') #escreve no arquivo
 arquivo_pathlib.read_text() #lê o arquivo
 #arquivo_pathlib.unlink() # apaga
 #mkdir() # cria um diretório
+
+
+# há um modulo python para compactar e descompactar arquivos zip
+# zipfile.ZipFile

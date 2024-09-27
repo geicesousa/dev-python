@@ -52,3 +52,4 @@ valor_parcela = valor_emprestimo / len(datas_parcelas)
 
 for data in datas_parcelas:
     print(f'''Data de pagamento: {data.strftime('%d-%m-%Y')}, Valor da parcela: {valor_parcela:.2f}''')
+    
