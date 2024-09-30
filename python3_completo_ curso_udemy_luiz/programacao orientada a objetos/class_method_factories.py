@@ -18,7 +18,7 @@ class Pessoa:
         return cls('Anônima', 'Sem sobrenome', idade) # esse tipo de estrutura que usa uma função para criar um classe é uma factorie, uma fábrica
     
     @staticmethod
-    def metodo_estatico(*args, **kwargs): # tem pouca utilidade, ele não tem acesso a cls nem ao self
+    def metodo_estatico(*args, **kwargs): # tem pouca utilidade, mas pode servir para organização , ele não tem acesso a cls nem ao self
         print('qualquer coisa', args, kwargs)
 
 print('pessoa1')
