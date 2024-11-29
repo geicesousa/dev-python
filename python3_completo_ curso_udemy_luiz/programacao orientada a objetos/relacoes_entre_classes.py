@@ -1,5 +1,5 @@
 # UML -> Linguagem de Modelagem Unificada, facilita a compreensão 
-# associação, agregação (herança) e composição 
+# associação, agregação e composição 
 
 #associação, temos 2 objetos separados e um objeto conhece o outro, é uma relação fraca
 class Escritor:
@@ -66,7 +66,7 @@ print(carrinho.total())
 print()
 
 
-# composição, um objeto gerencia o ciclo de vida do outro, no caso do exemplo, endereço só existe se cliente existir (caso não seja instaciado separadamente)
+# composição, um objeto gerencia o ciclo de vida do outro,é dono do outro, no caso do exemplo, endereço só existe se cliente existir (caso não seja instaciado separadamente)
 class Cliente:
     def __init__(self, nome):
         self.nome = nome

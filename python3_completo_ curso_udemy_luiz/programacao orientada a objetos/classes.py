@@ -1,4 +1,5 @@
 # uma classe é um molde para criar novos objetos, que são instâncias e que possuem seus próprios atributos e métodos
+# todas as classes em python herdam de builtins.objects, podemos ver usando: help(Classe)
 
 class Pessoa:
     ano_atual = 2024 # atributo de classe
@@ -8,7 +9,7 @@ class Pessoa:
         self.sobrenome = sobrenome
         self.idade = idade
 
-    def get_ano_nascimento(self):
+    def get_ano_nascimento(self): 
         return Pessoa.ano_atual - self.idade
         
         
@@ -25,7 +26,7 @@ class Camera:
         self.filmando=filmando
         pass
     
-    def filmar(self):
+    def filmar(self): # assinatura do método
         if self.filmando:
             print(f'{self.nome} já está filmando')
             return

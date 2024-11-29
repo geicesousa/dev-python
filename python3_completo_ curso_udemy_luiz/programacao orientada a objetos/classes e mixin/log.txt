@@ -1,0 +1,27 @@
+Error: log erro
+Success: log sucesso
+Error: log erro
+Success: log sucesso
+Error: log erro
+Success: log sucesso
+Error: na main
+Success: sucesso na main
+Success: ligou
+Success: ligou
+Success: ligou
+Error: desligou
+Success: ligou
+Error: desligou
+Success: Iphone ligado
+Success: ligou
+Error: desligou
+Success: Motorola ligado
+Success: ligou
+Error: desligou
+Success: Iphone ligado
+Success: Iphone ligado
+Success: Iphone ligado
+Success: Iphone ligado
+Error: Iphone desligado
+Success: Motorola ligado
+Error: Motorola desligado
