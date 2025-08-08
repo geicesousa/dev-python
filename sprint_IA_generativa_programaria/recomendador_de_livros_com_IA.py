@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path    
-from mcp.server.fastmcp import MCP
+from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP('search_book')
 
@@ -25,7 +25,7 @@ def search_book_oficina(gender: str, size: int, csv_path = biblioteca) -> pd.Dat
     libre = pd.read_csv(biblioteca, encoding= 'utf-8') #usa o pandas para ler o arquivo csv
     
     libre['pages'] = libre['pages'].astype(int) #define os tipos para que não seja diferente das colunas
-    libre['raiting'] = libre['raiting'].astype(float)
+    libre['rating'] = libre['rating'].astype(float)
     
     list_filtered = libre[(
         libre['genre'].str.contains(gender, case= False)) and #vai na coluna gênero e vê se contem o nome

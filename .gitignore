@@ -2,3 +2,6 @@ dev
 __pycache__
 .ipynb_checkpoints
 python_do_0_ao_avancado_curso_udemy/__pycache__
+.venv/
+.vscode/
+python_estudos_venv/

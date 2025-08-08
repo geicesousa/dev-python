@@ -37,7 +37,7 @@ async def chat():
     agent = create_react_agent(
         model=llm, 
         tools=tools, 
-        checkpointer=InMemorySaver(), #memoria do agente
+        checkpointer=InMemorySaver(), #memoria d agente
         prompt = "Você é um agente que ajuda usuários a encontrar livros com base em suas solicitações. " \
         "Você pode usar tools para buscar informações sobre livros. Lembre-se de traduzir o gênero do livro para o inglês antes de fazer a busca na tool." \
         "Considere livros curtos os livros que tem no máximo 130 páginas." \
@@ -82,4 +82,4 @@ async def chat():
            
     
 if __name__ == '__main__':
-    print('geice')
+    print()
